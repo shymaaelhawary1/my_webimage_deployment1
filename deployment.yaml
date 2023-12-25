@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      application: myproject_os2
+  template:
+    metadata:
+      name: pod1
+      labels:
+        application: myproject_os2
+    spec:
+      containers:
+      - name: mycontainer
+        image: shymaaelhawary1/mynew_image 
+        
